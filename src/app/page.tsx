@@ -1,13 +1,17 @@
 import Image from "next/image";
+import Marquee from "../components/Marquee";
 
 export default function Home() {
   return (
     <div>
-      জীবন, স্বাধীনতা এবং দৈহিক নিরাপত্তায় প্রত্যেকের অধিকার আছে। কা‌উকে অধীনতা
-      বা দাসত্বে আবদ্ধ করা যাবে না। সকল প্রকার ক্রীতদাস প্রথা এবং দাসব্যবসা
-      নিষিদ্ধ করা হবে। কা‌উকে নির্যাতন করা যাবে না; কিংবা কারো প্রতি নিষ্ঠুর,
-      অমানবিক বা অবমাননাকর আচরণ করা যাবে না অথবা কা‌উকে এহেন শাস্তি দেওয়া যাবে
-      না।
+    <Marquee></Marquee>
+    <div className="grid  grid-cols-3">
+{/* News */}
+<div></div>
+{/* Most read section */}
+<div></div>
+    </div>
+
     </div>
   );
 }
