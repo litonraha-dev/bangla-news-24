@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 interface News{
@@ -7,10 +8,12 @@ interface News{
     category:string,
     description:string,
     title:string
+    id:string;
 }
 const NewsCard = ({news}:{news:News}) => {
     console.log(news,"from news card")
     return (
+      <Link href={`/news/${news.id}`}>
         <div>
              <div className="flex gap-4">
                   <div className="card bg-base-100 w-96 shadow-sm">
@@ -31,6 +34,7 @@ const NewsCard = ({news}:{news:News}) => {
                  
                 </div>
         </div>
+      </Link>
     );
 };
 

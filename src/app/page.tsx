@@ -1,7 +1,7 @@
-import Image from "next/image";
-import Marquee from "../components/Marquee";
+
 import MainNews from "../components/MainNews";
 import NewsCard from "../components/NewsCard";
+import MostRead from "../components/MostRead";
 interface IOtherSections{
   curationId:string,
   title:string,
@@ -25,7 +25,7 @@ const otherSections:IOtherSections[] = section.slice(1);
 // console.log(otherSections);
   return (
     <div>
-      <Marquee></Marquee>
+      
       <div className="grid  grid-cols-3 max-w-7xl mx-auto">
         {/* News */}
         <div className=" col-span-2 p-10 ">
@@ -46,8 +46,8 @@ const otherSections:IOtherSections[] = section.slice(1);
         </div>
         {/* Most read section */}
         <div className=" col-span-1 ">
-          
 
+          <MostRead></MostRead>
         </div>
       </div>
     </div>
