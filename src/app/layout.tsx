@@ -28,8 +28,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="min-h-full flex flex-col">
         
         <Header ></Header>
+           <Navlinks></Navlinks>
         <Marquee></Marquee>
-        <Navlinks></Navlinks>
+     
    <main className="max-w-7xl  mx-auto">
      {children}
    </main>
