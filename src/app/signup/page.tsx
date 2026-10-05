@@ -1,18 +1,20 @@
 
 'use client'
 import { authClient } from "@/src/lib/auth-client";
+import { redirect } from "next/navigation";
 import React from "react";
 
 const SignUpPage = () => {
-  const onSubmit = async(e) => {
+  const onSubmit = async(e:React.SubmitEvent<HTMLElement>) => {
 e.preventDefault()
 const formData = new FormData(e.target)
-const user = Object.fromEntries(formData.entries())
+const user = Object.fromEntries(formData.entries()) as {name:string, image:string, email:string, password:string}
 const {data, error}= await authClient.signUp.email({
     ...user,
     callbackURL:'/'
 })
 if(data){
+  redirect('/')
     console.log(data);
 }
 if(error){

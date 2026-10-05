@@ -1,5 +1,6 @@
 
 import Image from "next/image";
+import Link from "next/link";
 
 const Header = () => {
   const date = new Date().toLocaleDateString("bn-BD", {
@@ -30,13 +31,13 @@ const Header = () => {
 
         {/* Auth Buttons */}
         <div className="flex  items-center gap-3 right-4 top-4 asbolute text-sm">
-          <button className="btn">
+         <Link href="/signin"> <button className="btn">
             সাইন ইন
-          </button>
+          </button></Link>
 
-          <button className="btn bg-red-700 text-white hover:bg-red-800">
+         <Link href='/signup' > <button className="btn bg-red-700 text-white hover:bg-red-800">
             সাইন আপ
-          </button>
+          </button></Link>
         </div>
 
       </div>
